@@ -8,7 +8,7 @@ App: This Shiny App gives users the capability to understand the obesity distrib
 
 #### Data Souce:
 
-Get data from [Food Environment Atlas ] (https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads.aspx)
+Get data from [Food Environment Atlas](https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads.aspx)
 
 ***
 
