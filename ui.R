@@ -78,7 +78,7 @@ dashboardPage(
                                                    "Recreation & fitness facilities/1,000 pop, 2012",
                                                    "% Population 65 years or older, 2010",
                                                    "% Population under age 18, 2010"),
-                                       selected = "Percent Obese 2009")
+                                       selected = "Percent Adult Obesity, 2010")
                        )
                 ),
                 box(width = 12, plotlyOutput("trendPlot", height = 550))
@@ -92,15 +92,15 @@ dashboardPage(
                 h3(htmlOutput("predtable")),
                 column(width = 12,
                        box(
-                         sliderInput("GROC", label = p("Grocery stores/1000 people, 2012"),
+                         sliderInput("GROC", label = p("Grocery stores/1,000 people, 2012"),
                                      min = rlow(data$GROCPTH12),
                                      max = rhigh(data$GROCPTH12), value =
                                        valmean(data$GROCPTH12)),
-                         sliderInput("Conv", label = p("Conveniences stores/1000 people, 2012"),
+                         sliderInput("Conv", label = p("Conveniences stores/1,000 people, 2012"),
                                      min = rlow(data$CONVSPTH12),
                                      max = rhigh(data$CONVSPTH12), value =
                                        valmean(data$CONVSPTH12)),
-                         sliderInput("FF", label = p("Fast-food stores/1000 people, 2012"),
+                         sliderInput("FF", label = p("Fast-food stores/1,000 people, 2012"),
                                      min = rlow(data$FFRPTH12),
                                      max = rhigh(data$FFRPTH12), value =
                                        valmean(data$FFRPTH12)),
@@ -130,7 +130,7 @@ dashboardPage(
 
                        box(
                          sliderInput("FOODINS", label = p("Household food insecurity (%,
-                                                          three-year average), 2010-12*"),
+                                                          three-year average), 2010-12"),
                                      min = rlow(data$FOODINSEC_10_12),
                                      max = rhigh(data$FOODINSEC_10_12), value =
                                        valmean(data$FOODINSEC_10_12)),
@@ -186,11 +186,10 @@ dashboardPage(
               fluidRow(
                 column(10, offset = 1,
                        
-                       h4("Data Source:"),
-                       p(a("Food Environment Atlas", 
-                           href="https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads.aspx"),
-                         
-                         "The current version of the Food Environment Atlas has 211 variables, 
+                       h4("Data Source:", a("Food Environment Atlas", 
+                           href="https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads.aspx")),
+                       
+                       p("The current version of the Food Environment Atlas has 211 variables, 
                          including new indicators on store availability; 
                          restaurant availability and expenditures; participants in the SNAP Program, 
                          the National School Lunch Program (NSLP), School Breakfast Program (SBP), 
@@ -208,7 +207,7 @@ dashboardPage(
                        
                        h4("Tools:"),
                        p("Built using Shiny by RStudio"),
-                       p("Code available on", a("GitHub", href="https://github.com/iamchuan?tab=repositories")),
+                       p("Code available on", a("GitHub", href="https://github.com/iamchuan/ObesityApp")),
                        
                        p("Author: Chuan Hong", a("LinkedIn", href="https://www.linkedin.com/in/iamchuan/"))
                 )
