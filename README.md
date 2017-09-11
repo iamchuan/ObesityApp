@@ -2,7 +2,7 @@
 
 ![](Figs/app.png)
 
-## Obesity
+## Obesity Prediction Application
 
 App: This Shiny App gives users the capability to understand the obesity distributin &trends and predict obesity rate. This App would be useful for organizations of health in disease control and medical research. 
 
